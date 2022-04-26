@@ -4,3 +4,5 @@ lvim.builtin.which_key.mappings["h"] = {
     l = { "<cmd>HopLine<cr>", "Hop Line" },
     c = { "<cmd>HopChar1<cr>", "Hop Char" },
 }
+
+lvim.builtin.which_key.mappings["2"] = { "<cmd>Vista<cr>", "Tags" }
