@@ -201,3 +201,4 @@ require('nvim-ts-autotag').setup()
 -- require("plugins.undotree")
 
 -- vim.notify("startup")
+lvim.builtin.treesitter.indent.disable["2"] = "python"
