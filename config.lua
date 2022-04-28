@@ -191,7 +191,7 @@ require("dap.dapui")
 
 require("basic.keybinds")
 
-require("plugins.indent-blankline")
+-- require("plugins.indent-blankline")
 require("plugins.lastplace")
 require("plugins.hop")
 require("plugins.more_which_key")
@@ -200,5 +200,5 @@ require("plugins.vista")
 require('nvim-ts-autotag').setup()
 -- require("plugins.undotree")
 
--- vim.notify("startup")
 lvim.builtin.treesitter.indent.disable["2"] = "python"
+-- vim.notify("startup")
