@@ -121,7 +121,7 @@ formatters.setup {
     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
     extra_args = { "--print-with", "80", "--arrow-parens", "avoid" },
     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
-    filetypes = { "typescript", "typescriptreact" },
+    filetypes = { "javascript", "typescript", "typescriptreact" },
   },
 }
 
@@ -141,7 +141,7 @@ linters.setup {
   --   ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
   --   filetypes = { "javascript", "python" },
   -- },
-  { command = 'eslint', filetypes = { 'typescriptreact', 'typescript' } }
+  { command = 'eslint', filetypes = { "javascript", 'typescriptreact', 'typescript' } }
 }
 
 -- Additional Plugins
@@ -158,7 +158,8 @@ lvim.plugins = {
   { "lukas-reineke/indent-blankline.nvim" },
   { "ethanholz/nvim-lastplace" },
   { "phaazon/hop.nvim" },
-  { "liuchengxu/vista.vim" }
+  { "liuchengxu/vista.vim" },
+  { "windwp/nvim-ts-autotag" }
   -- { "mbbill/undotree" }
 }
 
@@ -195,6 +196,8 @@ require("plugins.lastplace")
 require("plugins.hop")
 require("plugins.more_which_key")
 require("plugins.vista")
+
+require('nvim-ts-autotag').setup()
 -- require("plugins.undotree")
 
 -- vim.notify("startup")
