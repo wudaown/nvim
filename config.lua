@@ -11,11 +11,12 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "vscode"
-vim.g.vscode_style = 'dark'
-vim.g.vscode_transparent = 1
+lvim.colorscheme = "github_dark"
+-- vim.g.vscode_style = 'dark'
+-- vim.g.vscode_transparent = 1
 
 lvim.builtin.dap.active = true
+
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
@@ -67,19 +68,19 @@ lvim.builtin.nvimtree.show_icons.git = 0
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
-  "go",
-  "bash",
-  "c",
-  "javascript",
-  "json",
-  "lua",
-  "python",
-  "typescript",
-  "tsx",
-  "css",
-  "rust",
-  "java",
-  "yaml",
+    "go",
+    "bash",
+    "c",
+    "javascript",
+    "json",
+    "lua",
+    "python",
+    "typescript",
+    "tsx",
+    "css",
+    "rust",
+    "java",
+    "yaml",
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
@@ -111,56 +112,58 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
-  { command = "autopep8", filetypes = { "python" } },
-  { command = "gofmt", filetypes = { "go" } },
-  { command = "golines", filetypes = { "go" } },
-  {
-    -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
-    command = "prettier",
-    ---@usage arguments to pass to the formatter
-    -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
-    extra_args = { "--print-with", "120", "--arrow-parens", "avoid" },
-    ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
-    filetypes = { "javascript", "typescript", "typescriptreact" },
-  },
+    { command = "autopep8", filetypes = { "python" } },
+    { command = "gofmt", filetypes = { "go" } },
+    { command = "golines", filetypes = { "go" } },
+    {
+        -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
+        command = "prettier",
+        ---@usage arguments to pass to the formatter
+        -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
+        extra_args = { "--print-with", "120", "--arrow-parens", "avoid" },
+        ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
+        filetypes = { "javascript", "typescript", "typescriptreact" },
+    },
 }
 
 -- set additional linters
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-  { command = "flake8", filetypes = { "python" } },
-  -- {
-  --   -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
-  --   command = "shellcheck",
-  --   ---@usage arguments to pass to the formatter
-  --   -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
-  --   extra_args = { "--severity", "warning" },
-  -- },
-  -- {
-  --   command = "codespell",
-  --   ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
-  --   filetypes = { "javascript", "python" },
-  -- },
-  { command = 'eslint', filetypes = { "javascript", 'typescriptreact', 'typescript' } }
+    { command = "flake8", filetypes = { "python" } },
+    -- {
+    --   -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
+    --   command = "shellcheck",
+    --   ---@usage arguments to pass to the formatter
+    --   -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
+    --   extra_args = { "--severity", "warning" },
+    -- },
+    -- {
+    --   command = "codespell",
+    --   ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
+    --   filetypes = { "javascript", "python" },
+    -- },
+    { command = 'eslint', filetypes = { "javascript", 'typescriptreact', 'typescript' } }
 }
 
 -- Additional Plugins
 lvim.plugins = {
-  { "norcalli/nvim-colorizer.lua" },
-  { "xiyaowong/nvim-transparent" },
-  { "Mofiqul/vscode.nvim" },
-  {
-    "folke/trouble.nvim",
-    cmd = "TroubleToggle",
-  },
-  { "leoluz/nvim-dap-go" },
-  { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } },
-  { "lukas-reineke/indent-blankline.nvim" },
-  { "ethanholz/nvim-lastplace" },
-  { "phaazon/hop.nvim" },
-  { "liuchengxu/vista.vim" },
-  { "windwp/nvim-ts-autotag" }
-  -- { "mbbill/undotree" }
+    { "norcalli/nvim-colorizer.lua" },
+    { "xiyaowong/nvim-transparent" },
+    { "Mofiqul/vscode.nvim" },
+    {
+        "folke/trouble.nvim",
+        cmd = "TroubleToggle",
+    },
+    { "leoluz/nvim-dap-go" },
+    { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } },
+    { "lukas-reineke/indent-blankline.nvim" },
+    { "ethanholz/nvim-lastplace" },
+    { "phaazon/hop.nvim" },
+    { "liuchengxu/vista.vim" },
+    { "windwp/nvim-ts-autotag" },
+    { 'shaunsingh/nord.nvim' },
+    { "projekt0n/github-nvim-theme" }
+    -- { "mbbill/undotree" }
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
@@ -170,13 +173,13 @@ lvim.plugins = {
 
 vim.g.vscode_disable_nvimtree_bg = true
 vim.opt.mouse = ''
-vim.cmd([[colorscheme vscode]])
+-- vim.cmd([[colorscheme vscode]])
 
 
 require 'colorizer'.setup({
-  '*'; -- Highlight all files, but customize some others.
+    '*'; -- Highlight all files, but customize some others.
 }, {
-  mode = 'background'; -- Set the display mode.
+    mode = 'background'; -- Set the display mode.
 })
 
 
