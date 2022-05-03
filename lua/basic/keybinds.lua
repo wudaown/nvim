@@ -41,7 +41,8 @@ end
 
 vim.keybinds.gmap("n", "<C-P>", "<C-W>w<CR>", vim.keybinds.opts)
 vim.keybinds.gmap("n", "<C-W>", ":lua CloseBufferNvimTreeAware() <CR>", vim.keybinds.opts)
-
+vim.keybinds.gmap("n", "<C-L>", ":lua require('toggleterm').float_toggle() <CR>", vim.keybinds.opts)
+vim.keybinds.gmap("i", "<C-L>", "<Esc><Cmd>lua require('toggleterm').float_toggle() <CR>", vim.keybinds.opts)
 vim.keybinds.gmap("n", "<F6>", ":lua require('dap').continue()<CR>", vim.keybinds.opts)
 
 -- ToggleTerm
