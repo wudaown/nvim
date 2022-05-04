@@ -162,7 +162,8 @@ lvim.plugins = {
   { "liuchengxu/vista.vim" },
   { "windwp/nvim-ts-autotag" },
   { 'shaunsingh/nord.nvim' },
-  { "projekt0n/github-nvim-theme" }
+  { "projekt0n/github-nvim-theme" },
+  { 'CRAG666/code_runner.nvim', requires = 'nvim-lua/plenary.nvim' }
   -- { "mbbill/undotree" }
 }
 
@@ -200,6 +201,8 @@ require("plugins.hop")
 require("plugins.more_which_key")
 require("plugins.vista")
 require("plugins.term")
+require("plugins.code_runner")
+
 
 require('nvim-ts-autotag').setup()
 -- require("plugins.undotree")
