@@ -163,7 +163,8 @@ lvim.plugins = {
   { "windwp/nvim-ts-autotag" },
   { 'shaunsingh/nord.nvim' },
   { "projekt0n/github-nvim-theme" },
-  { 'CRAG666/code_runner.nvim', requires = 'nvim-lua/plenary.nvim' }
+  { 'CRAG666/code_runner.nvim', requires = 'nvim-lua/plenary.nvim' },
+  { "folke/todo-comments.nvim" }
   -- { "mbbill/undotree" }
 }
 
@@ -202,6 +203,7 @@ require("plugins.more_which_key")
 require("plugins.vista")
 require("plugins.term")
 require("plugins.code_runner")
+require("plugins.todo")
 
 
 require('nvim-ts-autotag').setup()
