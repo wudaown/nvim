@@ -7,4 +7,4 @@ lvim.builtin.which_key.mappings["h"] = {
 
 lvim.builtin.which_key.mappings["r"] = { "<cmd>RunCode<cr>", "Run Code" }
 
-lvim.builtin.which_key.mappings["2"] = { "<cmd>Vista<cr>", "Tags" }
+lvim.builtin.which_key.mappings["2"] = { "<cmd>Vista!!<cr>", "Tags" }
