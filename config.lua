@@ -175,6 +175,7 @@ lvim.plugins = {
 
 vim.g.vscode_disable_nvimtree_bg = true
 vim.opt.mouse = ''
+vim.opt.iskeyword:remove "_"
 -- vim.cmd([[colorscheme vscode]])
 
 
