@@ -28,6 +28,7 @@ return {
     ["<leader>h"] = { "<cmd>HopChar1<cr>", desc = "Hop Char" },
     ["<leader>a"] = { "<cmd>Telescope aerial<cr>", desc = "Show Symbols" },
     ["<C-\\>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle Terminal" },
+    ["<leader>r"] = { "<cmd>RunCode<cr>", desc = "Code runner" },
     -- quick save
     ["<C-s>"] = { ":w!<cr>", desc = "Save File" }, -- change description but the same command
   },
