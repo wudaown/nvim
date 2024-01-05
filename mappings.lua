@@ -38,4 +38,7 @@ return {
     -- ["<esc>"] = false,
     ["<C-\\>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle Terminal" },
   },
+  i = {
+    ["<C-L>"] = {'copilot#Accept("<CR>")', desc = "Copilot accept", noremap = true, silent = true, expr=true, replace_keycodes = false},
+  }
 }
