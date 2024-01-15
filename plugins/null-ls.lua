@@ -11,7 +11,7 @@ return {
       -- Set a formatter
       -- null_ls.builtins.formatting.stylua,
       -- null_ls.builtins.formatting.prettier,
-      null_ls.builtins.formatting.autopep8.with({ extra_args = { "--max-line-length", "120" } }),
+      null_ls.builtins.formatting.black.with({ extra_args = { "--line-length", "120" } }),
       null_ls.builtins.diagnostics.flake8.with({ extra_args = { "--max-line-length", "120" } })
     }
     return config -- return final config table
